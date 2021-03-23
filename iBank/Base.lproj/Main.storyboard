@@ -35,15 +35,15 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f11-bx-kI2">
-                                <rect key="frame" x="87.666666666666686" y="455" width="200" height="75"/>
+                                <rect key="frame" x="87.666666666666686" y="535" width="200" height="75"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxd-fW-PnS">
-                                        <rect key="frame" x="0.0" y="15.666666666666686" width="83" height="44"/>
+                                        <rect key="frame" x="0.0" y="15.666666666666629" width="83" height="44"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
                                         <state key="normal" title="Register"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxy-aL-uu6">
-                                        <rect key="frame" x="148" y="15.666666666666686" width="52" height="44"/>
+                                        <rect key="frame" x="148" y="15.666666666666629" width="52" height="44"/>
                                         <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
                                         <state key="normal" title="Login"/>
                                     </button>
@@ -58,23 +58,68 @@
                                     <constraint firstAttribute="trailing" secondItem="vxy-aL-uu6" secondAttribute="trailing" id="paP-Lc-nu8"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to auto fill the data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZH-3z-0Hi">
+                                <rect key="frame" x="105.66666666666669" y="471.66666666666669" width="152" height="24"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyX-ZZ-O24">
+                                <rect key="frame" x="20" y="465" width="78" height="37"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <state key="normal" title="Click Here"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="l4m-jj-Qq6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gml-xH-VhM"/>
+                            <constraint firstItem="FyX-ZZ-O24" firstAttribute="leading" secondItem="q0T-tD-Lkv" secondAttribute="leading" id="Occ-wY-OP0"/>
                             <constraint firstItem="q0T-tD-Lkv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Qqz-81-PsX"/>
                             <constraint firstItem="q0T-tD-Lkv" firstAttribute="top" secondItem="l4m-jj-Qq6" secondAttribute="bottom" constant="20" id="TdI-YJ-SUx"/>
                             <constraint firstItem="l4m-jj-Qq6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="VI5-rq-RXv"/>
                             <constraint firstItem="f11-bx-kI2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aJO-Op-IAO"/>
+                            <constraint firstItem="1ZH-3z-0Hi" firstAttribute="leading" secondItem="FyX-ZZ-O24" secondAttribute="trailing" constant="7.5" id="eXv-Vq-ayJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q0T-tD-Lkv" secondAttribute="trailing" constant="20" id="elZ-GX-RfP"/>
-                            <constraint firstItem="f11-bx-kI2" firstAttribute="top" secondItem="q0T-tD-Lkv" secondAttribute="bottom" constant="20" id="mgl-mx-jeV"/>
+                            <constraint firstItem="FyX-ZZ-O24" firstAttribute="top" secondItem="q0T-tD-Lkv" secondAttribute="bottom" constant="30" id="lqZ-bZ-Fa6"/>
+                            <constraint firstItem="f11-bx-kI2" firstAttribute="top" secondItem="q0T-tD-Lkv" secondAttribute="bottom" constant="100" id="mgl-mx-jeV"/>
+                            <constraint firstItem="1ZH-3z-0Hi" firstAttribute="centerY" secondItem="FyX-ZZ-O24" secondAttribute="centerY" id="rvh-qt-YxW"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="76"/>
+        </scene>
+        <!--LoginScreen-->
+        <scene sceneID="UdU-TQ-D2H">
+            <objects>
+                <viewController title="LoginScreen" id="34Q-zw-2zJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RS4-JH-pAu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PJT-KN-p40"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKp-je-UA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1145" y="449"/>
+        </scene>
+        <!--RegistrationScreen-->
+        <scene sceneID="wbS-iV-IcK">
+            <objects>
+                <viewController title="RegistrationScreen" id="SDM-Kc-vOD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aL6-Py-dix">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fln-RJ-uDt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f60-ff-RWZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1145" y="-241"/>
         </scene>
     </scenes>
     <resources>
