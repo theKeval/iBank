@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E09A373260A8D3200212A2C /* VC_Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E09A372260A8D3200212A2C /* VC_Registration.swift */; };
+		6E09A377260A8FBD00212A2C /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E09A376260A8FBD00212A2C /* Functions.swift */; };
 		6E684A762609AF65003D1579 /* ModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E684A752609AF65003D1579 /* ModelClass.swift */; };
 		6E684A7B2609B026003D1579 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E684A7A2609B026003D1579 /* FileUtils.swift */; };
 		6E83616F25FE88F100E7D851 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E83616E25FE88F100E7D851 /* AppDelegate.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E09A372260A8D3200212A2C /* VC_Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_Registration.swift; sourceTree = "<group>"; };
+		6E09A376260A8FBD00212A2C /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		6E684A752609AF65003D1579 /* ModelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClass.swift; sourceTree = "<group>"; };
 		6E684A7A2609B026003D1579 /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		6E83616B25FE88F100E7D851 /* iBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,22 +45,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6E684A742609AF2B003D1579 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				6E684A752609AF65003D1579 /* ModelClass.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6E684A792609AFD1003D1579 /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-				6E684A7A2609B026003D1579 /* FileUtils.swift */,
-			);
-			path = Storage;
-			sourceTree = "<group>";
-		};
 		6E83616225FE88F000E7D851 = {
 			isa = PBXGroup;
 			children = (
@@ -76,15 +64,17 @@
 		6E83616D25FE88F100E7D851 /* iBank */ = {
 			isa = PBXGroup;
 			children = (
-				6E684A792609AFD1003D1579 /* Storage */,
-				6E684A742609AF2B003D1579 /* Model */,
+				6E83617725FE88F600E7D851 /* Assets.xcassets */,
 				6E83616E25FE88F100E7D851 /* AppDelegate.swift */,
 				6E83617025FE88F100E7D851 /* SceneDelegate.swift */,
-				6E83617225FE88F100E7D851 /* ViewController.swift */,
-				6E83617425FE88F100E7D851 /* Main.storyboard */,
-				6E83617725FE88F600E7D851 /* Assets.xcassets */,
-				6E83617925FE88F600E7D851 /* LaunchScreen.storyboard */,
 				6E83617C25FE88F600E7D851 /* Info.plist */,
+				6E83617925FE88F600E7D851 /* LaunchScreen.storyboard */,
+				6E83617425FE88F100E7D851 /* Main.storyboard */,
+				6E83617225FE88F100E7D851 /* ViewController.swift */,
+				6E09A372260A8D3200212A2C /* VC_Registration.swift */,
+				6E09A376260A8FBD00212A2C /* Functions.swift */,
+				6E684A752609AF65003D1579 /* ModelClass.swift */,
+				6E684A7A2609B026003D1579 /* FileUtils.swift */,
 			);
 			path = iBank;
 			sourceTree = "<group>";
@@ -162,6 +152,8 @@
 				6E83617325FE88F100E7D851 /* ViewController.swift in Sources */,
 				6E83616F25FE88F100E7D851 /* AppDelegate.swift in Sources */,
 				6E684A762609AF65003D1579 /* ModelClass.swift in Sources */,
+				6E09A377260A8FBD00212A2C /* Functions.swift in Sources */,
+				6E09A373260A8D3200212A2C /* VC_Registration.swift in Sources */,
 				6E83617125FE88F100E7D851 /* SceneDelegate.swift in Sources */,
 				6E684A7B2609B026003D1579 /* FileUtils.swift in Sources */,
 			);
