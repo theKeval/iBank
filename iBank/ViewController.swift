@@ -9,11 +9,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var btnRegister: UIButton!
+    @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var btnAutoFill: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func showRegister(_ sender: Any) {
+        performSegue(withIdentifier: "segue_registration", sender: self)
+    }
+    
 }
 
