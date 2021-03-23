@@ -7,6 +7,14 @@
 
 import Foundation
 
+// object to store all customer details including their bank accounts
+var customers: Customers?
+// object to store currently logged in customer
+var loggedInCustomer: CustomerDetails?
+
+// getting the saved data if exist
+var savedData = getSavedData()
+
 // Constants
 let savingMinBal = Double(100)
 let savingIntRate = Double(6)

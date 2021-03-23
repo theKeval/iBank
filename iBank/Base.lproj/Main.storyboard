@@ -134,6 +134,9 @@
                                 <state key="normal" title=" Back" image="chevron.backward" catalog="system">
                                     <color key="titleColor" name="AccentColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="goBack:" destination="SDM-Kc-vOD" eventType="touchUpInside" id="Iuj-Sg-rFg"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCN-HX-Drd">
                                 <rect key="frame" x="16" y="71.333333333333314" width="343" height="652.66666666666674"/>

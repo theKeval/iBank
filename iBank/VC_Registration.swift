@@ -45,9 +45,10 @@ class VC_Registration: UIViewController {
         // Do any additional setup after loading the view.
         picker_accType.delegate = self
         picker_accType.dataSource = self
+        
+        pickerView(picker_accType, didSelectRow: 0, inComponent: 1)
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -57,6 +58,13 @@ class VC_Registration: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - UI Actions
+    
+    @IBAction func goBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 
 }
 
@@ -70,6 +78,33 @@ extension VC_Registration: UIPickerViewDelegate, UIPickerViewDataSource {
         return accTypes.count
     }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        accTypes[row]
+    }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        switch row {
+            case 0:
+                view_savingAcc.isHidden = false
+                view_salaryAcc.isHidden = true
+                view_fdAcc.isHidden = true
+                
+            case 1:
+                view_savingAcc.isHidden = true
+                view_salaryAcc.isHidden = false
+                view_fdAcc.isHidden = true
+                
+            case 2:
+                view_savingAcc.isHidden = true
+                view_salaryAcc.isHidden = true
+                view_fdAcc.isHidden = false
+                
+            default:
+                view_savingAcc.isHidden = true
+                view_salaryAcc.isHidden = true
+                view_fdAcc.isHidden = true
+        }
+    }
     
 }
