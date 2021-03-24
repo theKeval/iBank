@@ -43,6 +43,12 @@ enum Gender {
     case female
 }
 
+enum AccountTypes {
+    case savingAcc
+    case salaryAcc
+    case fdAcc
+}
+
 class Accounts: Codable {
     var salaryAcc: SalaryAccount?
     var savingsAcc: SavingsAccount?

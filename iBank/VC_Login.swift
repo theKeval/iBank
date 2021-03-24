@@ -45,6 +45,7 @@ class VC_Login: UIViewController {
                         }
                         else {
                             showCustomToast(message: "Login Success!", font: UIFont.myFont())
+                            performSegue(withIdentifier: "segue_homeScreen", sender: self)
                         }
                     }
                     else{

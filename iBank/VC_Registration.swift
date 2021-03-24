@@ -92,12 +92,12 @@ class VC_Registration: UIViewController {
             }
             
             // create the object of Customers which holds all data of our program
-            // customers = Customers(custs: [customer])
             if let custs = customers {
-                if custs.customers.count > 0 {
-                    custs.customers.append(customer)
-                    customers = custs
-                }
+                custs.customers.append(customer)
+                customers = custs
+            }
+            else {
+                customers = Customers(custs: [customer])
             }
             
             var jsonStr = ""
