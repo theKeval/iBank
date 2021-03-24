@@ -12,6 +12,7 @@ class VC_Registration: UIViewController {
     // outlets
     
     @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var scrollView_main: UIScrollView!
     
     @IBOutlet weak var field_name: UITextField!
     @IBOutlet weak var field_password: UITextField!
@@ -34,6 +35,8 @@ class VC_Registration: UIViewController {
     @IBOutlet weak var fdField_months: UITextField!
     @IBOutlet weak var fdLabel_intRate: UILabel!
     
+    @IBOutlet weak var btnSubmit: UIButton!
+    
     // Variables
     
     var accTypes = ["Saving Account", "Salary Account", "Fixed Deposit Account"]
@@ -46,7 +49,8 @@ class VC_Registration: UIViewController {
         picker_accType.delegate = self
         picker_accType.dataSource = self
         
-        pickerView(picker_accType, didSelectRow: 0, inComponent: 1)
+        pickerView(picker_accType, didSelectRow: 0, inComponent: 0)
+        // scrollView_main.scrollsToTop = true
     }
     
     /*
@@ -63,6 +67,107 @@ class VC_Registration: UIViewController {
     
     @IBAction func goBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func onSubmit(_ sender: Any) {
+        
+        if shouldSubmit() {
+            
+            let customer = CustomerDetails(name: field_name.text!, contactNo: field_contact.text!, address: field_address.text!, password: field_password.text!)
+            
+            switch picker_accType.selectedRow(inComponent: 0) {
+                case 0: // saving account
+                    customer.addBankAccounts(accs: Accounts(salAcc: nil, savAcc: SavingsAccount(accNo: generateNextAccountNumber(), accBalance: Double(savingField_amount.text!)!, minBal: savingMinBal, intRate: savingIntRate), fixAcc: nil))
+                    print("")
+                    
+                case 1: // salary account
+                    customer.addBankAccounts(accs: Accounts(salAcc: SalaryAccount(accNo: generateNextAccountNumber(), accBalance: Double(salaryField_amount.text!)!, employer: salaryField_employer.text!, monthlySalary: Double(salaryField_salary.text!)!), savAcc: nil, fixAcc: nil))
+                    print("")
+                    
+                case 2: // Fd account
+                    customer.addBankAccounts(accs: Accounts(salAcc: nil, savAcc: nil, fixAcc: FixedDepositAccount(accNo: generateNextAccountNumber(), accBalance: Double(fdField_amount.text!)!, termDur: Int(fdField_months.text!)!, intRate: fdIntRate)))
+                    print("")
+                    
+                default:
+                    print("Error")
+            }
+            
+            // create the object of Customers which holds all data of our program
+            customers = Customers(custs: [customer])
+            var jsonStr = ""
+            
+            // if customers obj is not nil, get the JSONstring for that object
+            if let data = customers {
+                jsonStr = getJsonString(of: data)
+            }
+            
+            // save Json string into file
+            saveJsonFile(of: jsonStr)
+            
+            field_name.text = ""
+            field_password.text = ""
+            field_contact.text = ""
+            field_address.text = ""
+            pickerView(picker_accType, didSelectRow: 0, inComponent: 0)
+            savingField_amount.text = ""
+            salaryField_amount.text = ""
+            salaryField_employer.text = ""
+            salaryField_salary.text = ""
+            fdField_amount.text = ""
+            fdField_months.text = ""
+            
+            self.showCustomToast(message: "Registration Successful!", font: UIFont(name: "Chalkboard SE", size: CGFloat(12)) ?? UIFont())
+            // self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    // MARK: - Helper functions
+    
+    func shouldSubmit() -> Bool {
+        if let name = field_name.text {
+            if !name.isEmpty {
+                if let pass = field_password.text {
+                    if !pass.isEmpty {
+                        
+                        switch picker_accType.selectedRow(inComponent: 0) {
+                            case 0: // saving account
+                                if let amount = savingField_amount.text {
+                                    if !amount.isEmpty {
+                                        return true
+                                    }
+                                }
+                                print("")
+                                
+                            case 1: // salary account
+                                if let amount = salaryField_amount.text {
+                                    if !amount.isEmpty {
+                                        return true
+                                    }
+                                }
+                                print("")
+                                
+                            case 2: // fixed deposit account
+                                if let amount = fdField_amount.text {
+                                    if !amount.isEmpty {
+                                        if let months = fdField_months.text {
+                                            if !months.isEmpty {
+                                                return true
+                                            }
+                                        }
+                                    }
+                                }
+                                print("")
+                                
+                            default:
+                                print("Error")
+                        }
+                        
+                    }
+                }
+            }
+        }
+        
+        return false
     }
     
 
@@ -90,6 +195,9 @@ extension VC_Registration: UIPickerViewDelegate, UIPickerViewDataSource {
                 view_salaryAcc.isHidden = true
                 view_fdAcc.isHidden = true
                 
+                savingLabel_minAmount.text = "$ \(String(savingMinBal))"
+                savingLabel_intRate.text = "\(String(savingIntRate)) %"
+                
             case 1:
                 view_savingAcc.isHidden = true
                 view_salaryAcc.isHidden = false
@@ -99,6 +207,8 @@ extension VC_Registration: UIPickerViewDelegate, UIPickerViewDataSource {
                 view_savingAcc.isHidden = true
                 view_salaryAcc.isHidden = true
                 view_fdAcc.isHidden = false
+                
+                fdLabel_intRate.text = "\(String(fdIntRate)) %"
                 
             default:
                 view_savingAcc.isHidden = true

@@ -375,6 +375,9 @@
                                                 <rect key="frame" x="140.66666666666666" y="710.66666666666663" width="62" height="41"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                                 <state key="normal" title="Submit"/>
+                                                <connections>
+                                                    <action selector="onSubmit:" destination="SDM-Kc-vOD" eventType="touchUpInside" id="IaJ-4j-6zo"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -447,6 +450,7 @@
                     <navigationItem key="navigationItem" id="srL-7k-cbo"/>
                     <connections>
                         <outlet property="btnBack" destination="LhF-32-CDr" id="UcY-Dc-dtN"/>
+                        <outlet property="btnSubmit" destination="IiO-x5-sqm" id="GRo-Vw-TGw"/>
                         <outlet property="fdField_amount" destination="2ag-D2-xmq" id="XMk-Px-AhC"/>
                         <outlet property="fdField_months" destination="dRN-l3-OtF" id="Y5V-2s-ICO"/>
                         <outlet property="fdLabel_intRate" destination="11V-3P-Xkf" id="JTL-wP-60i"/>
@@ -461,6 +465,7 @@
                         <outlet property="savingField_amount" destination="t2e-Jp-qrs" id="MoU-cO-Nqs"/>
                         <outlet property="savingLabel_intRate" destination="qgh-qo-uQH" id="d7z-tg-9YD"/>
                         <outlet property="savingLabel_minAmount" destination="wns-2P-MT5" id="WrC-lh-82Z"/>
+                        <outlet property="scrollView_main" destination="ZCN-HX-Drd" id="AOl-HP-1yi"/>
                         <outlet property="view_fdAcc" destination="8Ib-jx-mAc" id="DdP-eA-NBp"/>
                         <outlet property="view_salaryAcc" destination="iJE-74-CUU" id="rCW-1P-a9e"/>
                         <outlet property="view_savingAcc" destination="uhh-1f-Mp4" id="9Ld-Cl-qFg"/>
