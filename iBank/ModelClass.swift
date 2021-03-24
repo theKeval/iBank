@@ -20,20 +20,27 @@ class CustomerDetails: Codable {
     var contactNo: String
     var address: String
     var password: String
+    var gender: String
     
     var accounts: Accounts?
     
-    init(name: String, contactNo: String, address: String, password: String) {
+    init(name: String, contactNo: String, address: String, password: String, gender: String) {
         self.name = name
         self.contactNo = contactNo
         self.address = address
         self.password = password
+        self.gender = gender
         
         // self.accounts = []
     }
     func addBankAccounts(accs: Accounts) {
         accounts = accs
     }
+}
+
+enum Gender {
+    case male
+    case female
 }
 
 class Accounts: Codable {

@@ -23,5 +23,9 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "segue_registration", sender: self)
     }
     
+    @IBAction func showLogin(_ sender: Any) {
+        performSegue(withIdentifier: "segue_login", sender: self)
+    }
+    
 }
 

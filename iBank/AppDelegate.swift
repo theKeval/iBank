@@ -18,7 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let appearance = UILabel.appearance()
 //        appearance.font = UIFont(name: "Chalkboard SE", size: CGFloat(17))
         
-        
+        savedData = getSavedData()
+        if !savedData.isFirstTime {
+            customers = savedData.cust
+        }
+        else {
+            // first time app open - no saved data
+            print("first time app open - no saved data")
+        }
         
         return true
     }

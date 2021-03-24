@@ -16,6 +16,7 @@ class VC_Registration: UIViewController {
     
     @IBOutlet weak var field_name: UITextField!
     @IBOutlet weak var field_password: UITextField!
+    @IBOutlet weak var segment_gender: UISegmentedControl!
     @IBOutlet weak var field_contact: UITextField!
     @IBOutlet weak var field_address: UITextField!
     @IBOutlet weak var picker_accType: UIPickerView!
@@ -53,7 +54,6 @@ class VC_Registration: UIViewController {
         // scrollView_main.scrollsToTop = true
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -61,7 +61,6 @@ class VC_Registration: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
     
     // MARK: - UI Actions
     
@@ -73,7 +72,7 @@ class VC_Registration: UIViewController {
         
         if shouldSubmit() {
             
-            let customer = CustomerDetails(name: field_name.text!, contactNo: field_contact.text!, address: field_address.text!, password: field_password.text!)
+            let customer = CustomerDetails(name: field_name.text!, contactNo: field_contact.text!, address: field_address.text!, password: field_password.text!, gender: segment_gender.selectedSegmentIndex == 0 ? "male" : "female")
             
             switch picker_accType.selectedRow(inComponent: 0) {
                 case 0: // saving account
@@ -93,7 +92,14 @@ class VC_Registration: UIViewController {
             }
             
             // create the object of Customers which holds all data of our program
-            customers = Customers(custs: [customer])
+            // customers = Customers(custs: [customer])
+            if let custs = customers {
+                if custs.customers.count > 0 {
+                    custs.customers.append(customer)
+                    customers = custs
+                }
+            }
+            
             var jsonStr = ""
             
             // if customers obj is not nil, get the JSONstring for that object
@@ -108,6 +114,7 @@ class VC_Registration: UIViewController {
             field_password.text = ""
             field_contact.text = ""
             field_address.text = ""
+            picker_accType.selectRow(0, inComponent: 0, animated: true)
             pickerView(picker_accType, didSelectRow: 0, inComponent: 0)
             savingField_amount.text = ""
             salaryField_amount.text = ""
@@ -116,7 +123,7 @@ class VC_Registration: UIViewController {
             fdField_amount.text = ""
             fdField_months.text = ""
             
-            self.showCustomToast(message: "Registration Successful!", font: UIFont(name: "Chalkboard SE", size: CGFloat(12)) ?? UIFont())
+            self.showCustomToast(message: "Registration Successful!", font: UIFont.myFont())
             // self.dismiss(animated: true, completion: nil)
         }
     }

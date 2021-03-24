@@ -13,7 +13,8 @@ var customers: Customers?
 var loggedInCustomer: CustomerDetails?
 
 // getting the saved data if exist
-var savedData = getSavedData()
+// var savedData = getSavedData()
+var savedData: (cust: Customers?, isFirstTime: Bool) = (nil, true)
 
 // Constants
 let savingMinBal = Double(100)
@@ -21,36 +22,36 @@ let savingIntRate = Double(6)
 let fdIntRate = Double(9)
 var lastAccountNumber = 0
 
-func registerMultipleUsers() -> [CustomerDetails] {
-    var customers = [CustomerDetails]()
-    var again = false
-    repeat {
-        customers.append(registerUser())
-        print("Would you like to register more user? y/n")
-        again = readLine()! == "y"
-    }
-    while again
+//func registerMultipleUsers() -> [CustomerDetails] {
+//    var customers = [CustomerDetails]()
+//    var again = false
+//    repeat {
+//        customers.append(registerUser())
+//        print("Would you like to register more user? y/n")
+//        again = readLine()! == "y"
+//    }
+//    while again
+//
+//    return customers
+//}
 
-    return customers
-}
-
-func registerUser() -> CustomerDetails {
-    print("Enter your name: ")
-    let name = readLine()!
-    print("Set your password: ")
-    let pass = readLine()!
-    print("Enter your contact no: ")
-    let contactNo = readLine()!
-    print("Enter your address/city: ")
-    let address = readLine()!
-
-    let customer = CustomerDetails(name: name, contactNo: contactNo, address: address, password: pass)
-    customer.addBankAccounts(accs: letAddBankAccounts())
-
-    print("Registration successful.")
-
-    return customer
-}
+//func registerUser() -> CustomerDetails {
+//    print("Enter your name: ")
+//    let name = readLine()!
+//    print("Set your password: ")
+//    let pass = readLine()!
+//    print("Enter your contact no: ")
+//    let contactNo = readLine()!
+//    print("Enter your address/city: ")
+//    let address = readLine()!
+//
+//    let customer = CustomerDetails(name: name, contactNo: contactNo, address: address, password: pass)
+//    customer.addBankAccounts(accs: letAddBankAccounts())
+//
+//    print("Registration successful.")
+//
+//    return customer
+//}
 
 func letAddBankAccounts(accs: Accounts? = nil) -> Accounts {
     
@@ -91,34 +92,30 @@ func letAddBankAccounts(accs: Accounts? = nil) -> Accounts {
     return bankAccounts
 }
 
-func customerLogin() -> CustomerDetails? {
-    var customer: CustomerDetails?
-    var again = false
-    repeat {
-        customer = tryLogin()
-        if let cust = customer {
-            print("Welcome \(cust.name)")
-            again = false
-        }
-        else {
-            print("Incorrect name or password. Would you like to try again? y/n")
-            again = readLine()! == "y"
-        }
-    }
-    while again
+//func customerLogin() -> CustomerDetails? {
+//    var customer: CustomerDetails?
+//    var again = false
+//    repeat {
+//        customer = tryLogin()
+//        if let cust = customer {
+//            print("Welcome \(cust.name)")
+//            again = false
+//        }
+//        else {
+//            print("Incorrect name or password. Would you like to try again? y/n")
+//            again = readLine()! == "y"
+//        }
+//    }
+//    while again
+//
+//    return customer
+//}
 
-    return customer
-}
-
-func tryLogin() -> CustomerDetails? {
-    print("Enter your name:")
-    let name = readLine()!
-    print("Enter your password:")
-    let pass = readLine()!
-
+func tryLogin(name: String, pass: String) -> CustomerDetails? {
     if let custs = customers?.customers {
         for cust in custs {
-            if cust.name.lowercased() == name.lowercased(), cust.password.lowercased() == pass.lowercased() {
+            if cust.name.lowercased() == name.lowercased(),
+               cust.password.lowercased() == pass.lowercased() {
                 // code to login
                 return cust
             }
