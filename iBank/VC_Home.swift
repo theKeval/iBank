@@ -13,6 +13,7 @@ class VC_Home: UIViewController {
     @IBOutlet weak var label_helloGuest: UILabel!
     @IBOutlet weak var tvAccountList: UITableView!
     @IBOutlet weak var constraint_tvAccList_height: NSLayoutConstraint!
+    @IBOutlet weak var btnLogout: UIButton!
     
     var accounts = [BankAccount]()
     
@@ -46,7 +47,7 @@ class VC_Home: UIViewController {
         tvAccountList.dataSource = self
         tvAccountList.tableFooterView = UIView()
         
-        // constraint_tvAccList_height.constant = CGFloat(accounts.count * 100)
+        constraint_tvAccList_height.constant = CGFloat(accounts.count * 88)
         
     }
     
@@ -58,6 +59,30 @@ class VC_Home: UIViewController {
         // Pass the selected object to the new view controller.
     }
     
+    @IBAction func goBack(_ sender: Any) {
+        showAlertPopup(title: "Confirmation", message: "Going back will log you out. Are you sure you want to log out?", alertStyle: .alert, actionTitles: ["Cancel", "Logout"], actionStyles: [.cancel, .default], actions: [dismissAlert(action:), logout(_:)])
+    }
+    
+    func dismissAlert(action: UIAlertAction) {
+        //
+    }
+    
+    func alertActionLogout(action: UIAlertAction) {
+        performLogout()
+    }
+    
+    func performLogout() {
+        loggedInCustomer = nil
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func logout(_ sender: Any) {
+        performLogout()
+        
+        if let cust = loggedInCustomer {
+            print(cust.name)
+        }
+    }
     
     
 }

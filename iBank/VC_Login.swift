@@ -18,6 +18,7 @@ class VC_Login: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        fieldName.becomeFirstResponder()
     }
     
     // MARK: - Navigation
@@ -45,6 +46,9 @@ class VC_Login: UIViewController {
                         }
                         else {
                             showCustomToast(message: "Login Success!", font: UIFont.myFont())
+                            fieldName.text = ""
+                            fieldPassword.text = ""
+                            fieldName.becomeFirstResponder()
                             performSegue(withIdentifier: "segue_homeScreen", sender: self)
                         }
                     }
