@@ -23,7 +23,7 @@ class VC_Home: UIViewController {
         // Do any additional setup after loading the view.
         
         if let customer = loggedInCustomer {
-            label_helloGuest.text = "Hello \(loggedInCustomer!.name),"
+            label_helloGuest.text = "Hello \(loggedInCustomer!.name),\nWelcome back to iBank"
             
             if let _accounts = customer.accounts {
                 if let savingAcc = _accounts.savingsAcc {
