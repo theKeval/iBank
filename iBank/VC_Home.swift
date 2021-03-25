@@ -19,7 +19,7 @@ class VC_Home: UIViewController {
     @IBOutlet weak var withdraw_view: UIView!
     @IBOutlet weak var transfer_view: UIView!
     @IBOutlet weak var payBill_view: UIView!
-    @IBOutlet weak var accAcc_view: UIView!
+    @IBOutlet weak var addAcc_view: UIView!
     @IBOutlet weak var editProfile_view: UIView!
     @IBOutlet weak var transactions_view: UIView!
     
@@ -59,29 +59,20 @@ class VC_Home: UIViewController {
         
         // adding tap gesture to all transactions UIView
         
-        // deposit_view.addTapGesture(action: onDepositClick)
+        deposit_view.addTapGesture(action: onDepositClick)
+        withdraw_view.addTapGesture(action: onWithdrawClicked)
+        transfer_view.addTapGesture(action: onTransferClicked)
+        payBill_view.addTapGesture(action: onPayBillClicked)
+        addAcc_view.addTapGesture(action: onAddAccClicked)
+        editProfile_view.addTapGesture(action: onEditProfileClicked)
+        transactions_view.addTapGesture(action: onTransactionsClicked)
         
-        let gesture_deposit = UITapGestureRecognizer(target: self, action:  #selector(onDepositClick))
-        deposit_view.addGestureRecognizer(gesture_deposit)
-        
-//        let gesture_withdraw = UITapGestureRecognizer(target: self, action:  #selector(onWithdrawClicked))
-//        deposit_view.addGestureRecognizer(gesture_withdraw)
-//
-//        let gesture_transfer = UITapGestureRecognizer(target: self, action:  #selector(onTransferClicked))
-//        deposit_view.addGestureRecognizer(gesture_transfer)
-//
-//        let gesture_payBill = UITapGestureRecognizer(target: self, action:  #selector(onPayBillClicked))
-//        deposit_view.addGestureRecognizer(gesture_payBill)
-//
-//        let gesture_addAcc = UITapGestureRecognizer(target: self, action:  #selector(onAddAccClicked))
-//        deposit_view.addGestureRecognizer(gesture_addAcc)
-//
-//        let gesture_editProfile = UITapGestureRecognizer(target: self, action:  #selector(onEditProfileClicked))
-//        deposit_view.addGestureRecognizer(gesture_editProfile)
-//
-//        let gesture_transactions = UITapGestureRecognizer(target: self, action:  #selector(onTransactionsClicked))
-//        deposit_view.addGestureRecognizer(gesture_transactions)
-        
+    }
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
     
     
@@ -96,6 +87,51 @@ class VC_Home: UIViewController {
     }
     
     
+    // MARK: - functions for Transactions
+    
+    func onDepositClick() {
+        
+        if let selectedRow = tvAccountList.indexPathForSelectedRow {
+            let acc = accounts[selectedRow.row]
+            showDepositPopup(acc: acc)
+        }
+        else {
+            showAlertPopup(title: "Oops", message: "Please select any account from your account list, to deposit money in that account!", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in}])
+        }
+        
+    }
+    
+    func onWithdrawClicked() {
+        
+        if let selectedRow = tvAccountList.indexPathForSelectedRow {
+            let acc = accounts[selectedRow.row]
+            showWithdrawPopup(acc: acc)
+        }
+        else {
+            showAlertPopup(title: "Oops", message: "Please select any account from your account list, to withdraw money from that account!", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in}])
+        }
+        
+    }
+    
+    func onTransferClicked() {
+        
+    }
+    
+    func onPayBillClicked() {
+        
+    }
+    
+    func onAddAccClicked() {
+        
+    }
+    
+    func onEditProfileClicked() {
+        
+    }
+    
+    func onTransactionsClicked() {
+        
+    }
     
     
     // MARK: - Helper functions
@@ -113,53 +149,17 @@ class VC_Home: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @objc func onDepositClick(sender: UITapGestureRecognizer) {
-        showCustomToast(message: "deposit clicked", font: UIFont.myFont())
-        if let selectedRow = tvAccountList.indexPathForSelectedRow {
-            let acc = accounts[selectedRow.row]
-            showDepositPopup(acc: acc)
-        }
-        else {
-            showAlertPopup(title: "Oops", message: "Please select any account from your account list, to deposit money in that account!", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in}])
-        }
-    }
-    
-    @objc func onWithdrawClicked(sender: UITapGestureRecognizer) {
-        showCustomToast(message: "Withdraw clicked", font: UIFont.myFont())
-    }
-    
-    @objc func onTransferClicked(sender: UITapGestureRecognizer) {
-        
-    }
-    
-    @objc func onPayBillClicked(sender: UITapGestureRecognizer) {
-        
-    }
-    
-    @objc func onAddAccClicked(sender: UITapGestureRecognizer) {
-        
-    }
-    
-    @objc func onEditProfileClicked(sender: UITapGestureRecognizer) {
-        
-    }
-    
-    @objc func onTransactionsClicked(sender: UITapGestureRecognizer) {
-        
-    }
-    
-    
     func showDepositPopup(acc: BankAccount) {
-        var userIdTextField: UITextField?
+        var depositAmountTextField: UITextField?
         
         // Declare Alert message
         let dialogMessage = UIAlertController(title: "Deposit Money", message: "Please enter the amount you want to deposit!", preferredStyle: .alert)
         
         // Create OK button with action handler
-        let ok = UIAlertAction(title: "Deposit", style: .default, handler: { (action) -> Void in
+        let ok = UIAlertAction(title: "Deposit", style: .destructive, handler: { (action) -> Void in
             print("Ok button tapped")
             
-            if let userInput = userIdTextField!.text {
+            if let userInput = depositAmountTextField!.text {
                 print("User entered \(userInput)")
                 
                 if !userInput.isEmpty {
@@ -192,20 +192,70 @@ class VC_Home: UIViewController {
         // Add Input TextField to dialog message
         dialogMessage.addTextField { (textField) -> Void in
             
-            userIdTextField = textField
-            userIdTextField?.placeholder = "Enter amount to add"
+            depositAmountTextField = textField
+            depositAmountTextField?.placeholder = "Enter amount to add"
         }
         
         // Present dialog message to user
         self.present(dialogMessage, animated: true, completion: nil)
     }
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func showWithdrawPopup(acc: BankAccount) {
+        var withdrawAmountTextField: UITextField?
+        
+        // Declare Alert message
+        let dialogMessage = UIAlertController(title: "Withdraw Money", message: "Please enter the amount you want to withdraw!", preferredStyle: .alert)
+        
+        // Create OK button with action handler
+        let ok = UIAlertAction(title: "Withdraw", style: .destructive, handler: { (action) -> Void in
+            print("Ok button tapped")
+            
+            if let userInput = withdrawAmountTextField!.text {
+                print("User entered \(userInput)")
+                
+                if !userInput.isEmpty {
+                    if let amount = Double(userInput) {
+                        if amount < acc.accountBalance {
+                            _ = acc.deductBalance(amountToDeduct: amount)
+                            updateData()
+                            self.tvAccountList.reloadData()
+                            
+                            self.showCustomToast(message: "Success!", font: UIFont.myFont())
+                        }
+                        else {
+                            self.showAlertPopup(title: "Oops", message: "Entered amount is more than existing account balance!", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in}])
+                        }
+                        
+                    }
+                    else {
+                        self.showCustomToast(message: "Enter valid amount", font: UIFont.myFont())
+                    }
+                }
+                else {
+                    self.showCustomToast(message: "enter amount", font: UIFont.myFont())
+                }
+            }
+        })
+        
+        // Create Cancel button with action handlder
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+            print("Cancel button tapped")
+        }
+        
+        //Add OK and Cancel button to dialog message
+        dialogMessage.addAction(ok)
+        dialogMessage.addAction(cancel)
+        
+        // Add Input TextField to dialog message
+        dialogMessage.addTextField { (textField) -> Void in
+            
+            withdrawAmountTextField = textField
+            withdrawAmountTextField?.placeholder = "Enter amount to add"
+        }
+        
+        // Present dialog message to user
+        self.present(dialogMessage, animated: true, completion: nil)
     }
-    
     
 }
 

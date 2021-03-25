@@ -595,7 +595,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZIm-K6-oNp"/>
                     <connections>
-                        <outlet property="accAcc_view" destination="wjZ-hb-QKh" id="AKK-04-jVv"/>
+                        <outlet property="addAcc_view" destination="wjZ-hb-QKh" id="AKK-04-jVv"/>
                         <outlet property="btnBack" destination="8gm-16-xFy" id="g5C-ld-7pZ"/>
                         <outlet property="btnLogout" destination="JM8-aR-gjp" id="4EY-2f-7f1"/>
                         <outlet property="constraint_tvAccList_height" destination="QnD-5c-HU5" id="SxM-Nv-nNU"/>
