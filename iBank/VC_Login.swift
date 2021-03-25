@@ -45,7 +45,8 @@ class VC_Login: UIViewController {
                             showAlertPopup(title: "Uh-oh", message: "name and password doesn't match OR the user not found", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{_ in}])
                         }
                         else {
-                            showCustomToast(message: "Login Success!", font: UIFont.myFont())
+                            // showCustomToast(message: "Login Success!", font: UIFont.myFont())
+                            
                             fieldName.text = ""
                             fieldPassword.text = ""
                             fieldName.becomeFirstResponder()
