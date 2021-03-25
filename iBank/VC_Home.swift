@@ -60,11 +60,11 @@ class VC_Home: UIViewController {
     }
     
     @IBAction func goBack(_ sender: Any) {
-        showAlertPopup(title: "Confirmation", message: "Going back will log you out. Are you sure you want to log out?", alertStyle: .alert, actionTitles: ["Cancel", "Logout"], actionStyles: [.cancel, .default], actions: [dismissAlert(action:), logout(_:)])
+        showAlertPopup(title: "Confirmation", message: "Going back will log you out. Are you sure you want to log out?", alertStyle: .alert, actionTitles: ["Cancel", "Logout"], actionStyles: [.cancel, .destructive], actions: [dismissAlert(action:), alertActionLogout(action:)])
     }
     
     func dismissAlert(action: UIAlertAction) {
-        //
+        // do nothing to just dismiss the alert
     }
     
     func alertActionLogout(action: UIAlertAction) {
@@ -77,11 +77,7 @@ class VC_Home: UIViewController {
     }
     
     @IBAction func logout(_ sender: Any) {
-        performLogout()
-        
-        if let cust = loggedInCustomer {
-            print(cust.name)
-        }
+        showAlertPopup(title: "Confirmation", message: "Are you sure you want to log out?", alertStyle: .alert, actionTitles: ["Cancel", "Logout"], actionStyles: [.cancel, .destructive], actions: [dismissAlert(action:), alertActionLogout(action:)])
     }
     
     
