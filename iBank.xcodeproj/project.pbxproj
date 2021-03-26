@@ -13,6 +13,7 @@
 		6E09A37E260B534900212A2C /* VC_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E09A37D260B534900212A2C /* VC_Login.swift */; };
 		6E09A381260B94DF00212A2C /* VC_Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E09A380260B94DF00212A2C /* VC_Home.swift */; };
 		6E09A384260BAE1700212A2C /* TVcell_AccountList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E09A383260BAE1700212A2C /* TVcell_AccountList.swift */; };
+		6E09A387260D49E600212A2C /* VC_AddBankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E09A386260D49E600212A2C /* VC_AddBankAccount.swift */; };
 		6E684A762609AF65003D1579 /* ModelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E684A752609AF65003D1579 /* ModelClass.swift */; };
 		6E684A7B2609B026003D1579 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E684A7A2609B026003D1579 /* FileUtils.swift */; };
 		6E83616F25FE88F100E7D851 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E83616E25FE88F100E7D851 /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 		6E09A37D260B534900212A2C /* VC_Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_Login.swift; sourceTree = "<group>"; };
 		6E09A380260B94DF00212A2C /* VC_Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_Home.swift; sourceTree = "<group>"; };
 		6E09A383260BAE1700212A2C /* TVcell_AccountList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVcell_AccountList.swift; sourceTree = "<group>"; };
+		6E09A386260D49E600212A2C /* VC_AddBankAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_AddBankAccount.swift; sourceTree = "<group>"; };
 		6E684A752609AF65003D1579 /* ModelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelClass.swift; sourceTree = "<group>"; };
 		6E684A7A2609B026003D1579 /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		6E83616B25FE88F100E7D851 /* iBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +89,7 @@
 				6E684A752609AF65003D1579 /* ModelClass.swift */,
 				6E684A7A2609B026003D1579 /* FileUtils.swift */,
 				6E09A37A260B3E3F00212A2C /* Extensions.swift */,
+				6E09A386260D49E600212A2C /* VC_AddBankAccount.swift */,
 			);
 			path = iBank;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E09A387260D49E600212A2C /* VC_AddBankAccount.swift in Sources */,
 				6E83617325FE88F100E7D851 /* ViewController.swift in Sources */,
 				6E09A384260BAE1700212A2C /* TVcell_AccountList.swift in Sources */,
 				6E09A381260B94DF00212A2C /* VC_Home.swift in Sources */,

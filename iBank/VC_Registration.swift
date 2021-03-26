@@ -76,15 +76,15 @@ class VC_Registration: UIViewController {
             
             switch picker_accType.selectedRow(inComponent: 0) {
                 case 0: // saving account
-                    customer.addBankAccounts(accs: Accounts(salAcc: nil, savAcc: SavingsAccount(accNo: generateNextAccountNumber(), accBalance: Double(savingField_amount.text!)!, minBal: savingMinBal, intRate: savingIntRate), fixAcc: nil))
+                    customer.addBankAccounts(accs: Accounts(salAcc: nil, savAcc: SavingsAccount(accNo: generateAccountNumber(), accBalance: Double(savingField_amount.text!)!, minBal: savingMinBal, intRate: savingIntRate), fixAcc: nil))
                     print("")
                     
                 case 1: // salary account
-                    customer.addBankAccounts(accs: Accounts(salAcc: SalaryAccount(accNo: generateNextAccountNumber(), accBalance: Double(salaryField_amount.text!)!, employer: salaryField_employer.text!, monthlySalary: Double(salaryField_salary.text!)!), savAcc: nil, fixAcc: nil))
+                    customer.addBankAccounts(accs: Accounts(salAcc: SalaryAccount(accNo: generateAccountNumber(), accBalance: Double(salaryField_amount.text!)!, employer: salaryField_employer.text!, monthlySalary: Double(salaryField_salary.text!)!), savAcc: nil, fixAcc: nil))
                     print("")
                     
                 case 2: // Fd account
-                    customer.addBankAccounts(accs: Accounts(salAcc: nil, savAcc: nil, fixAcc: FixedDepositAccount(accNo: generateNextAccountNumber(), accBalance: Double(fdField_amount.text!)!, termDur: Int(fdField_months.text!)!, intRate: fdIntRate)))
+                    customer.addBankAccounts(accs: Accounts(salAcc: nil, savAcc: nil, fixAcc: FixedDepositAccount(accNo: generateAccountNumber(), accBalance: Double(fdField_amount.text!)!, termDur: Int(fdField_months.text!)!, intRate: fdIntRate)))
                     print("")
                     
                 default:

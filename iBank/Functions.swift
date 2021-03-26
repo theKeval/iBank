@@ -244,6 +244,46 @@ func generateNextAccountNumber() -> String {
     return String(format: "%03d", accNo)
 }
 
+func generateAccountNumber() -> String {
+    var accNo = 0
+    var lastAccNo = lastAccountNumber
+    let SavedData = getSavedData()
+    if SavedData.isFirstTime {
+        accNo = Int(String(format: "%03d", 1))!
+    }
+    else {
+        if let custs = SavedData.cust {
+            for cust in custs.customers {
+                
+                if let fd = cust.accounts!.fixedDepositAcc {
+                    if Int(fd.accountNo)! > lastAccNo {
+                        lastAccNo = Int(fd.accountNo)!
+                    }
+                }
+                
+                if let sal = cust.accounts!.salaryAcc {
+                    if Int(sal.accountNo)! > lastAccNo {
+                        lastAccNo = Int(sal.accountNo)!
+                    }
+                }
+                
+                if let sav = cust.accounts!.savingsAcc {
+                    if Int(sav.accountNo)! > lastAccNo {
+                        lastAccNo = Int(sav.accountNo)!
+                    }
+                }
+                
+            }
+        }
+        
+    }
+    
+    accNo = lastAccNo + 1
+    lastAccountNumber = accNo
+    return String(format: "%03d", accNo)
+}
+
+
 func createSalaryAcc() -> SalaryAccount {
     let accNo = generateNextAccountNumber()
     print("Enter the account balance you'd like to add:")

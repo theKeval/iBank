@@ -27,25 +27,14 @@ class VC_Home: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("viewDidLoad")
 
         // Do any additional setup after loading the view.
         
         if let customer = loggedInCustomer {
             label_helloGuest.text = "Hello \(loggedInCustomer!.name),\nWelcome back to iBank!"
             
-            if let _accounts = customer.accounts {
-                if let savingAcc = _accounts.savingsAcc {
-                    accounts.append(savingAcc)
-                }
-                
-                if let salaryAcc = _accounts.salaryAcc {
-                    accounts.append(salaryAcc)
-                }
-                
-                if let fdAcc = _accounts.fixedDepositAcc {
-                    accounts.append(fdAcc)
-                }
-            }
+            setBankAccounts(customer: customer)
         }
         else {
             print("Error:- loggedInCustomer is nil")
@@ -67,6 +56,19 @@ class VC_Home: UIViewController {
         editProfile_view.addTapGesture(action: onEditProfileClicked)
         transactions_view.addTapGesture(action: onTransactionsClicked)
         
+    }
+    
+    // this function will be called everytime a ViewController will appear on screen
+    // So, we can use this function to check any updates to process on screen like updating the bank account table view and like that
+    override func viewDidAppear(_ animated: Bool) {
+        if let customer = loggedInCustomer {
+            setBankAccounts(customer: customer)
+            tvAccountList.reloadData()
+            constraint_tvAccList_height.constant = CGFloat(accounts.count * 88)
+        }
+        else {
+            print("Error:- loggedInCustomer is nil")
+        }
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -122,7 +124,7 @@ class VC_Home: UIViewController {
     }
     
     func onAddAccClicked() {
-        
+        performSegue(withIdentifier: "segue_addBankAcc", sender: self)
     }
     
     func onEditProfileClicked() {
@@ -255,6 +257,24 @@ class VC_Home: UIViewController {
         
         // Present dialog message to user
         self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
+    func setBankAccounts(customer: CustomerDetails) {
+        accounts = [BankAccount]()
+        
+        if let _accounts = customer.accounts {
+            if let savingAcc = _accounts.savingsAcc {
+                accounts.append(savingAcc)
+            }
+            
+            if let salaryAcc = _accounts.salaryAcc {
+                accounts.append(salaryAcc)
+            }
+            
+            if let fdAcc = _accounts.fixedDepositAcc {
+                accounts.append(fdAcc)
+            }
+        }
     }
     
 }
