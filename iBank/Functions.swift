@@ -517,7 +517,7 @@ func transferMoney(accs: Accounts?) {
                         let money = Double(readLine()!)!
                         
                         if money < _salAcc.accountBalance {
-                            addToBeneficiary(money: money)
+                            // addToBeneficiary(money: money)
                             let amount = _salAcc.deductBalance(amountToDeduct: money)
                             print("New balance in \(loggedInCustomer!.name)'s salary account is \(amount)")
                             print("Transfer Successful !")
@@ -531,7 +531,7 @@ func transferMoney(accs: Accounts?) {
                         let money = Double(readLine()!)!
                         
                         if money < _savAcc.accountBalance {
-                            addToBeneficiary(money: money)
+                            // addToBeneficiary(money: money)
                             let amount = _savAcc.deductBalance(amountToDeduct: money)
                             print("New balance in \(loggedInCustomer!.name)'s Savings account is \(amount)")
                             print("Transfer Successful !")
@@ -544,7 +544,7 @@ func transferMoney(accs: Accounts?) {
                         let money = Double(readLine()!)!
                         
                         if money < _fdAcc.accountBalance {
-                            addToBeneficiary(money: money)
+                            // addToBeneficiary(money: money)
                             let amount = _fdAcc.deductBalance(amountToDeduct: money)
                             print("New balance in \(loggedInCustomer!.name)'s Fixed Deposit account is \(amount)")
                             print("Transfer Successful !")
@@ -561,11 +561,11 @@ func transferMoney(accs: Accounts?) {
     }
 }
 
-func addToBeneficiary(money: Double) {
+func addToBeneficiary(money: Double, accToTransfer: String) {
     
-    print("Enter the account number in which you would like to transfer money.")
-    print("Available account numbers are: \(getAvailableAccountNumbers())")
-    let accToTransfer = readLine()!
+//    print("Enter the account number in which you would like to transfer money.")
+//    print("Available account numbers are: \(getAvailableAccountNumbers())")
+//    let accToTransfer = readLine()!
     
     for item in customers!.customers {
         

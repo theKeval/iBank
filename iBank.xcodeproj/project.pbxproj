@@ -86,13 +86,13 @@
 				6E09A372260A8D3200212A2C /* VC_Registration.swift */,
 				6E09A37D260B534900212A2C /* VC_Login.swift */,
 				6E09A380260B94DF00212A2C /* VC_Home.swift */,
+				6E09A386260D49E600212A2C /* VC_AddBankAccount.swift */,
+				6E09A389260D73F100212A2C /* VC_TransferMoney.swift */,
 				6E09A383260BAE1700212A2C /* TVcell_AccountList.swift */,
 				6E09A376260A8FBD00212A2C /* Functions.swift */,
 				6E684A752609AF65003D1579 /* ModelClass.swift */,
 				6E684A7A2609B026003D1579 /* FileUtils.swift */,
 				6E09A37A260B3E3F00212A2C /* Extensions.swift */,
-				6E09A386260D49E600212A2C /* VC_AddBankAccount.swift */,
-				6E09A389260D73F100212A2C /* VC_TransferMoney.swift */,
 			);
 			path = iBank;
 			sourceTree = "<group>";

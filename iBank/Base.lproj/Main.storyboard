@@ -944,7 +944,7 @@
                                 <rect key="frame" x="16" y="114" width="358" height="680"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ga-ho-BBG">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="701.66666666666663"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cPR-D0-8fT">
                                                 <rect key="frame" x="0.0" y="80.666666666666657" width="358" height="199.99999999999997"/>
@@ -996,16 +996,57 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the payee account:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYr-1d-kmo">
+                                                <rect key="frame" x="8" y="320.66666666666669" width="342" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLv-hT-f4d">
+                                                <rect key="frame" x="0.0" y="351" width="358" height="216"/>
+                                            </pickerView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1O-BP-JYw">
+                                                <rect key="frame" x="20" y="577" width="69.666666666666671" height="27"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ykc-yh-42n">
+                                                <rect key="frame" x="109.66666666666667" y="573.66666666666663" width="228.33333333333331" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIY-Y9-iYE">
+                                                <rect key="frame" x="137.66666666666666" y="637.66666666666663" width="83" height="44"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                                <state key="normal" title="Transfer"/>
+                                                <connections>
+                                                    <action selector="makeTransfer:" destination="ejD-vf-sOj" eventType="touchUpInside" id="Xjb-OK-k3n"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="500" id="6LI-5E-Trm"/>
+                                            <constraint firstItem="Ykc-yh-42n" firstAttribute="leading" secondItem="A1O-BP-JYw" secondAttribute="trailing" constant="20" id="0tL-gd-69M"/>
+                                            <constraint firstItem="Ykc-yh-42n" firstAttribute="centerY" secondItem="A1O-BP-JYw" secondAttribute="centerY" id="1O2-5y-WJS"/>
+                                            <constraint firstItem="rLv-hT-f4d" firstAttribute="leading" secondItem="3Ga-ho-BBG" secondAttribute="leading" id="CrV-LM-tGQ"/>
                                             <constraint firstAttribute="trailing" secondItem="eNH-uG-pOI" secondAttribute="trailing" constant="8" id="ERa-ke-7CQ"/>
+                                            <constraint firstItem="DIY-Y9-iYE" firstAttribute="top" secondItem="Ykc-yh-42n" secondAttribute="bottom" constant="30" id="Exr-1x-Zgf"/>
+                                            <constraint firstItem="LYr-1d-kmo" firstAttribute="trailing" secondItem="eNH-uG-pOI" secondAttribute="trailing" id="GN7-cA-cvE"/>
                                             <constraint firstItem="eNH-uG-pOI" firstAttribute="leading" secondItem="3Ga-ho-BBG" secondAttribute="leading" constant="8" id="I1G-Hv-KXc"/>
+                                            <constraint firstItem="LYr-1d-kmo" firstAttribute="top" secondItem="cPR-D0-8fT" secondAttribute="bottom" constant="40" id="I4N-cG-BOz"/>
+                                            <constraint firstItem="DIY-Y9-iYE" firstAttribute="centerX" secondItem="3Ga-ho-BBG" secondAttribute="centerX" id="SDb-Yd-ugI"/>
+                                            <constraint firstAttribute="bottom" secondItem="DIY-Y9-iYE" secondAttribute="bottom" constant="20" id="T5O-3X-pWQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ykc-yh-42n" secondAttribute="trailing" constant="20" id="Vbg-Fn-0eX"/>
+                                            <constraint firstItem="A1O-BP-JYw" firstAttribute="leading" secondItem="3Ga-ho-BBG" secondAttribute="leading" constant="20" id="fF0-lQ-gce"/>
+                                            <constraint firstItem="LYr-1d-kmo" firstAttribute="leading" secondItem="eNH-uG-pOI" secondAttribute="leading" id="fSg-em-fTL"/>
+                                            <constraint firstItem="rLv-hT-f4d" firstAttribute="top" secondItem="LYr-1d-kmo" secondAttribute="bottom" constant="10" id="h96-c1-Xyr"/>
                                             <constraint firstItem="cPR-D0-8fT" firstAttribute="top" secondItem="eNH-uG-pOI" secondAttribute="bottom" constant="20" id="hgq-yC-2fK"/>
+                                            <constraint firstAttribute="trailing" secondItem="rLv-hT-f4d" secondAttribute="trailing" id="l6o-uP-bVY"/>
                                             <constraint firstItem="eNH-uG-pOI" firstAttribute="top" secondItem="3Ga-ho-BBG" secondAttribute="top" constant="20" id="lKz-4X-HhH"/>
                                             <constraint firstAttribute="trailing" secondItem="cPR-D0-8fT" secondAttribute="trailing" id="mgV-nR-ieC"/>
                                             <constraint firstItem="cPR-D0-8fT" firstAttribute="leading" secondItem="3Ga-ho-BBG" secondAttribute="leading" id="t0t-CR-nfs"/>
+                                            <constraint firstItem="A1O-BP-JYw" firstAttribute="top" secondItem="rLv-hT-f4d" secondAttribute="bottom" constant="10" id="xiD-Mk-Dsz"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1036,7 +1077,10 @@
                     <navigationItem key="navigationItem" id="ytS-fU-dGL"/>
                     <connections>
                         <outlet property="btnBack" destination="Nor-3e-T6H" id="tSA-hA-9G6"/>
+                        <outlet property="btnTransfer" destination="DIY-Y9-iYE" id="fgb-Wo-cNP"/>
                         <outlet property="constraint_tvAccList_height" destination="P5d-et-kHw" id="GKf-4j-UGV"/>
+                        <outlet property="fieldAmount" destination="Ykc-yh-42n" id="7tN-6O-Wc6"/>
+                        <outlet property="picker_payee" destination="rLv-hT-f4d" id="pyf-2N-EcG"/>
                         <outlet property="tvAccountList" destination="cPR-D0-8fT" id="8jI-cZ-OnC"/>
                     </connections>
                 </viewController>

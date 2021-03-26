@@ -21,6 +21,10 @@ class VC_Login: UIViewController {
         fieldName.becomeFirstResponder()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        fieldName.becomeFirstResponder()
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
