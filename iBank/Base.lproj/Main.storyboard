@@ -870,12 +870,15 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiL-0N-ZFm">
-                                                <rect key="frame" x="141.66666666666666" y="474.33333333333331" width="75" height="40.999999999999943"/>
+                                                <rect key="frame" x="129" y="474.33333333333331" width="100" height="40.999999999999943"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="75" id="trV-dw-oR3"/>
+                                                    <constraint firstAttribute="width" constant="100" id="trV-dw-oR3"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
-                                                <state key="normal" title="Submit"/>
+                                                <state key="normal" title="Submit">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="onSubmit:" destination="SDM-Kc-vOD" eventType="touchUpInside" id="8a6-dg-No1"/>
                                                     <action selector="onSubmit:" destination="uCe-KW-gKS" eventType="touchUpInside" id="Mn4-Re-OkR"/>
@@ -1055,9 +1058,15 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIY-Y9-iYE">
-                                                <rect key="frame" x="137.66666666666666" y="649.33333333333337" width="83" height="44"/>
+                                                <rect key="frame" x="119" y="649.33333333333337" width="120" height="44"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="F2Y-nY-5Rl"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
-                                                <state key="normal" title="Transfer"/>
+                                                <state key="normal" title="Transfer">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="makeTransfer:" destination="ejD-vf-sOj" eventType="touchUpInside" id="Xjb-OK-k3n"/>
                                                 </connections>
