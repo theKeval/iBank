@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--WelcomeScreen-->
+        <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="WelcomeScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="iBank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Welcome" id="BYZ-38-t0r" customClass="ViewController" customModule="iBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="20" y="76"/>
         </scene>
-        <!--LoginScreen-->
+        <!--Login-->
         <scene sceneID="UdU-TQ-D2H">
             <objects>
-                <viewController title="LoginScreen" modalPresentationStyle="fullScreen" id="34Q-zw-2zJ" customClass="VC_Login" customModule="iBank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" modalPresentationStyle="fullScreen" id="34Q-zw-2zJ" customClass="VC_Login" customModule="iBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RS4-JH-pAu">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,10 +235,10 @@
             </objects>
             <point key="canvasLocation" x="1144.8" y="448.52216748768473"/>
         </scene>
-        <!--HomeScreen-->
+        <!--Home-->
         <scene sceneID="DyH-TJ-0IH">
             <objects>
-                <viewController title="HomeScreen" modalPresentationStyle="fullScreen" id="Nw4-m7-yIQ" customClass="VC_Home" customModule="iBank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" modalPresentationStyle="fullScreen" id="Nw4-m7-yIQ" customClass="VC_Home" customModule="iBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hqC-Vg-T8l">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -608,16 +608,17 @@
                         <outlet property="tvAccountList" destination="Tvr-hS-lLe" id="aGa-tK-naE"/>
                         <outlet property="withdraw_view" destination="jo8-kV-mbd" id="qQs-qc-Kq1"/>
                         <segue destination="uCe-KW-gKS" kind="show" identifier="segue_addBankAcc" id="gnI-Sx-SCa"/>
+                        <segue destination="ejD-vf-sOj" kind="show" identifier="segue_transferMoney" id="o3n-lD-IWw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOj-nq-yhl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2248.8000000000002" y="448.52216748768473"/>
         </scene>
-        <!--AddBankAccountScreen-->
+        <!--AddBankAccount-->
         <scene sceneID="GoM-ob-akE">
             <objects>
-                <viewController title="AddBankAccountScreen" modalPresentationStyle="fullScreen" id="uCe-KW-gKS" customClass="VC_AddBankAccount" customModule="iBank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="AddBankAccount" modalPresentationStyle="fullScreen" id="uCe-KW-gKS" customClass="VC_AddBankAccount" customModule="iBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nWW-Wz-est">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -910,12 +911,143 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dF6-A2-2hf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3303" y="448"/>
+            <point key="canvasLocation" x="3348" y="-242"/>
         </scene>
-        <!--RegistrationScreen-->
+        <!--TransferMoney-->
+        <scene sceneID="iig-aq-So7">
+            <objects>
+                <viewController title="TransferMoney" modalPresentationStyle="fullScreen" id="ejD-vf-sOj" customClass="VC_TransferMoney" customModule="iBank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jKs-aQ-aUg">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer Money" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vB8-aD-1QI">
+                                <rect key="frame" x="105" y="64" width="180" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="NDs-Wl-i9x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nor-3e-T6H">
+                                <rect key="frame" x="10" y="73" width="58" height="22"/>
+                                <state key="normal" title=" Back" image="chevron.backward" catalog="system">
+                                    <color key="titleColor" name="AccentColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="Nw4-m7-yIQ" eventType="touchUpInside" id="3JF-1q-cdi"/>
+                                    <action selector="goBack:" destination="ejD-vf-sOj" eventType="touchUpInside" id="hBh-mH-y5P"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Akm-9E-dYW">
+                                <rect key="frame" x="16" y="114" width="358" height="680"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ga-ho-BBG">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="500"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cPR-D0-8fT">
+                                                <rect key="frame" x="0.0" y="80.666666666666657" width="358" height="199.99999999999997"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="P5d-et-kHw"/>
+                                                </constraints>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TVcell_AccountList" rowHeight="88" id="o8F-Hj-Ejz" customClass="TVcell_AccountList" customModule="iBank" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="358" height="88"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o8F-Hj-Ejz" id="i9L-9j-aE2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="358" height="88"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Account Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIQ-1n-6W7">
+                                                                    <rect key="frame" x="16" y="10" width="332" height="27"/>
+                                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="19"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky2-G3-PEs">
+                                                                    <rect key="frame" x="16" y="47" width="332" height="31"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="CIQ-1n-6W7" firstAttribute="leading" secondItem="i9L-9j-aE2" secondAttribute="leading" constant="16" id="3SP-Hv-7c9"/>
+                                                                <constraint firstAttribute="bottom" secondItem="ky2-G3-PEs" secondAttribute="bottom" constant="10" id="77K-xo-LfH"/>
+                                                                <constraint firstAttribute="trailing" secondItem="CIQ-1n-6W7" secondAttribute="trailing" constant="10" id="PiO-fh-KGy"/>
+                                                                <constraint firstItem="ky2-G3-PEs" firstAttribute="top" secondItem="CIQ-1n-6W7" secondAttribute="bottom" constant="10" id="hby-ag-Jo1"/>
+                                                                <constraint firstItem="CIQ-1n-6W7" firstAttribute="top" secondItem="i9L-9j-aE2" secondAttribute="top" constant="10" id="oIx-NQ-5hj"/>
+                                                                <constraint firstItem="ky2-G3-PEs" firstAttribute="trailing" secondItem="CIQ-1n-6W7" secondAttribute="trailing" id="otc-iN-qnD"/>
+                                                                <constraint firstItem="ky2-G3-PEs" firstAttribute="leading" secondItem="CIQ-1n-6W7" secondAttribute="leading" id="sQn-ZJ-RtG"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="label_accBalance" destination="ky2-G3-PEs" id="Oam-g2-sIb"/>
+                                                            <outlet property="label_accType" destination="CIQ-1n-6W7" id="HcM-q7-Pff"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the acctount from which you would like to make the transfer:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNH-uG-pOI">
+                                                <rect key="frame" x="8" y="19.999999999999996" width="342" height="40.666666666666657"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="500" id="6LI-5E-Trm"/>
+                                            <constraint firstAttribute="trailing" secondItem="eNH-uG-pOI" secondAttribute="trailing" constant="8" id="ERa-ke-7CQ"/>
+                                            <constraint firstItem="eNH-uG-pOI" firstAttribute="leading" secondItem="3Ga-ho-BBG" secondAttribute="leading" constant="8" id="I1G-Hv-KXc"/>
+                                            <constraint firstItem="cPR-D0-8fT" firstAttribute="top" secondItem="eNH-uG-pOI" secondAttribute="bottom" constant="20" id="hgq-yC-2fK"/>
+                                            <constraint firstItem="eNH-uG-pOI" firstAttribute="top" secondItem="3Ga-ho-BBG" secondAttribute="top" constant="20" id="lKz-4X-HhH"/>
+                                            <constraint firstAttribute="trailing" secondItem="cPR-D0-8fT" secondAttribute="trailing" id="mgV-nR-ieC"/>
+                                            <constraint firstItem="cPR-D0-8fT" firstAttribute="leading" secondItem="3Ga-ho-BBG" secondAttribute="leading" id="t0t-CR-nfs"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3Ga-ho-BBG" firstAttribute="top" secondItem="tgS-ZN-UDa" secondAttribute="top" id="15M-Sk-bnh"/>
+                                    <constraint firstItem="3Ga-ho-BBG" firstAttribute="leading" secondItem="tgS-ZN-UDa" secondAttribute="leading" id="9oX-bh-9YC"/>
+                                    <constraint firstItem="3Ga-ho-BBG" firstAttribute="width" secondItem="eW3-KQ-pQC" secondAttribute="width" id="Gu6-xj-vlN"/>
+                                    <constraint firstItem="3Ga-ho-BBG" firstAttribute="trailing" secondItem="tgS-ZN-UDa" secondAttribute="trailing" id="MTP-lJ-cW4"/>
+                                    <constraint firstItem="3Ga-ho-BBG" firstAttribute="bottom" secondItem="tgS-ZN-UDa" secondAttribute="bottom" id="ac0-1C-4Pu"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="tgS-ZN-UDa"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="eW3-KQ-pQC"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Wu-RS-X7D"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vB8-aD-1QI" firstAttribute="centerX" secondItem="jKs-aQ-aUg" secondAttribute="centerX" id="7SG-7h-LAc"/>
+                            <constraint firstItem="vB8-aD-1QI" firstAttribute="top" secondItem="7Wu-RS-X7D" secondAttribute="top" constant="20" id="NF1-zP-fr4"/>
+                            <constraint firstItem="Akm-9E-dYW" firstAttribute="top" secondItem="vB8-aD-1QI" secondAttribute="bottom" constant="16" id="Pmm-TX-NlP"/>
+                            <constraint firstItem="Nor-3e-T6H" firstAttribute="leading" secondItem="7Wu-RS-X7D" secondAttribute="leading" constant="10" id="SOR-7S-O6u"/>
+                            <constraint firstItem="7Wu-RS-X7D" firstAttribute="trailing" secondItem="Akm-9E-dYW" secondAttribute="trailing" constant="16" id="a4V-VY-nlf"/>
+                            <constraint firstItem="7Wu-RS-X7D" firstAttribute="bottom" secondItem="Akm-9E-dYW" secondAttribute="bottom" constant="16" id="iKj-24-cSy"/>
+                            <constraint firstItem="Akm-9E-dYW" firstAttribute="leading" secondItem="7Wu-RS-X7D" secondAttribute="leading" constant="16" id="quR-fM-716"/>
+                            <constraint firstItem="vB8-aD-1QI" firstAttribute="centerY" secondItem="Nor-3e-T6H" secondAttribute="centerY" constant="-3" id="vwd-vo-2CY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ytS-fU-dGL"/>
+                    <connections>
+                        <outlet property="btnBack" destination="Nor-3e-T6H" id="tSA-hA-9G6"/>
+                        <outlet property="constraint_tvAccList_height" destination="P5d-et-kHw" id="GKf-4j-UGV"/>
+                        <outlet property="tvAccountList" destination="cPR-D0-8fT" id="8jI-cZ-OnC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eMT-4G-Dng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3347.6923076923076" y="447.86729857819904"/>
+        </scene>
+        <!--Registration-->
         <scene sceneID="wbS-iV-IcK">
             <objects>
-                <viewController title="RegistrationScreen" modalPresentationStyle="fullScreen" id="SDM-Kc-vOD" customClass="VC_Registration" customModule="iBank" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Registration" modalPresentationStyle="fullScreen" id="SDM-Kc-vOD" customClass="VC_Registration" customModule="iBank" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aL6-Py-dix">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -116,7 +116,7 @@ class VC_Home: UIViewController {
     }
     
     func onTransferClicked() {
-        
+        performSegue(withIdentifier: "segue_transferMoney", sender: self)
     }
     
     func onPayBillClicked() {
