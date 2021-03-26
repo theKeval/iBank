@@ -21,7 +21,7 @@ class VC_Home: UIViewController {
     @IBOutlet weak var payBill_view: UIView!
     @IBOutlet weak var addAcc_view: UIView!
     @IBOutlet weak var editProfile_view: UIView!
-    @IBOutlet weak var transactions_view: UIView!
+    // @IBOutlet weak var transactions_view: UIView!
     
     var accounts = [BankAccount]()
     
@@ -54,7 +54,7 @@ class VC_Home: UIViewController {
         payBill_view.addTapGesture(action: onPayBillClicked)
         addAcc_view.addTapGesture(action: onAddAccClicked)
         editProfile_view.addTapGesture(action: onEditProfileClicked)
-        transactions_view.addTapGesture(action: onTransactionsClicked)
+        // transactions_view.addTapGesture(action: onTransactionsClicked)
         
     }
     
@@ -128,7 +128,7 @@ class VC_Home: UIViewController {
     }
     
     func onEditProfileClicked() {
-        
+        performSegue(withIdentifier: "segue_editProfile", sender: self)
     }
     
     func onTransactionsClicked() {
