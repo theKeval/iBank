@@ -17,86 +17,118 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iBank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4m-jj-Qq6">
-                                <rect key="frame" x="145" y="64" width="100" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="j8c-z1-Z6l"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="36"/>
-                                <color key="textColor" name="AccentColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q0T-tD-Lkv">
-                                <rect key="frame" x="20" y="135" width="350" height="300"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="7KC-AB-2lX"/>
-                                </constraints>
-                                <string key="text">Hello &amp; Welcome to iBank,  iBank is a premetive banking system.  In this application you will be able to register or login to iBank. Access your bank accounts perform various transactions and also modify the account details.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f11-bx-kI2">
-                                <rect key="frame" x="95" y="535" width="200" height="75"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jo-Yc-GtL">
+                                <rect key="frame" x="16" y="64" width="358" height="730"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxd-fW-PnS">
-                                        <rect key="frame" x="0.0" y="15.666666666666629" width="83" height="44"/>
-                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
-                                        <state key="normal" title="Register"/>
-                                        <connections>
-                                            <action selector="showRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P0p-ZH-n9b"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxy-aL-uu6">
-                                        <rect key="frame" x="148" y="15.666666666666629" width="52" height="44"/>
-                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
-                                        <state key="normal" title="Login"/>
-                                        <connections>
-                                            <action selector="showLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g9l-gX-bw6"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vJe-Ec-xRF">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="583"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O8Q-3V-ECN" userLabel="view_header">
+                                                <rect key="frame" x="35" y="16" width="268" height="140"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bank_icon" translatesAutoresizingMaskIntoConstraints="NO" id="HQd-XG-dCl">
+                                                        <rect key="frame" x="16" y="6" width="128" height="128"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="128" id="5Jm-KR-4Nw"/>
+                                                            <constraint firstAttribute="width" constant="128" id="rmU-gi-ocS"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iBank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4m-jj-Qq6">
+                                                        <rect key="frame" x="152" y="44.666666666666671" width="100" height="51"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="j8c-z1-Z6l"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="36"/>
+                                                        <color key="textColor" name="AccentColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="l4m-jj-Qq6" secondAttribute="trailing" constant="16" id="Uta-1v-tBb"/>
+                                                    <constraint firstItem="l4m-jj-Qq6" firstAttribute="centerY" secondItem="HQd-XG-dCl" secondAttribute="centerY" id="ZcG-pz-6p2"/>
+                                                    <constraint firstItem="HQd-XG-dCl" firstAttribute="leading" secondItem="O8Q-3V-ECN" secondAttribute="leading" constant="16" id="Zhd-M5-Okf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="HQd-XG-dCl" secondAttribute="bottom" constant="6" id="eZz-Im-up2"/>
+                                                    <constraint firstItem="l4m-jj-Qq6" firstAttribute="leading" secondItem="HQd-XG-dCl" secondAttribute="trailing" constant="8" symbolic="YES" id="nkL-Yh-xl1"/>
+                                                    <constraint firstItem="HQd-XG-dCl" firstAttribute="top" secondItem="O8Q-3V-ECN" secondAttribute="top" constant="6" id="sjU-ex-SDI"/>
+                                                </constraints>
+                                            </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vZo-SC-aOJ">
+                                                <rect key="frame" x="10" y="172" width="338" height="300"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="pkM-Fg-165"/>
+                                                </constraints>
+                                                <string key="text">Hello &amp; Welcome to iBank,  iBank is a premetive banking system.  In this application you will be able to register or login to iBank. Access your bank accounts perform various transactions and also modify the account details.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f11-bx-kI2" userLabel="view_buttons">
+                                                <rect key="frame" x="79" y="488" width="200" height="75"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxd-fW-PnS">
+                                                        <rect key="frame" x="0.0" y="15.666666666666629" width="83" height="44"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                                        <state key="normal" title="Register"/>
+                                                        <connections>
+                                                            <action selector="showRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P0p-ZH-n9b"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxy-aL-uu6">
+                                                        <rect key="frame" x="148" y="15.666666666666629" width="52" height="44"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                                        <state key="normal" title="Login"/>
+                                                        <connections>
+                                                            <action selector="showLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g9l-gX-bw6"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="DqT-Lc-6H1"/>
+                                                    <constraint firstAttribute="width" constant="200" id="FPD-U9-HqD"/>
+                                                    <constraint firstItem="vxy-aL-uu6" firstAttribute="centerY" secondItem="oxd-fW-PnS" secondAttribute="centerY" id="Uqp-7X-2SI"/>
+                                                    <constraint firstItem="oxd-fW-PnS" firstAttribute="centerY" secondItem="f11-bx-kI2" secondAttribute="centerY" id="Yf9-Dq-zee"/>
+                                                    <constraint firstItem="oxd-fW-PnS" firstAttribute="leading" secondItem="f11-bx-kI2" secondAttribute="leading" id="jmD-Mk-Yn1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vxy-aL-uu6" secondAttribute="trailing" id="paP-Lc-nu8"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="O8Q-3V-ECN" firstAttribute="centerX" secondItem="vJe-Ec-xRF" secondAttribute="centerX" constant="-10" id="3su-49-rYd"/>
+                                            <constraint firstItem="vZo-SC-aOJ" firstAttribute="top" secondItem="O8Q-3V-ECN" secondAttribute="bottom" constant="16" id="5Cg-EC-nnL"/>
+                                            <constraint firstAttribute="bottom" secondItem="f11-bx-kI2" secondAttribute="bottom" constant="20" id="D22-0f-r9x"/>
+                                            <constraint firstItem="f11-bx-kI2" firstAttribute="top" secondItem="vZo-SC-aOJ" secondAttribute="bottom" constant="16" id="SaC-lh-XHr"/>
+                                            <constraint firstItem="vZo-SC-aOJ" firstAttribute="leading" secondItem="vJe-Ec-xRF" secondAttribute="leading" constant="10" id="UJP-zN-tfr"/>
+                                            <constraint firstAttribute="trailing" secondItem="vZo-SC-aOJ" secondAttribute="trailing" constant="10" id="Yhn-2e-ZXc"/>
+                                            <constraint firstItem="O8Q-3V-ECN" firstAttribute="top" secondItem="vJe-Ec-xRF" secondAttribute="top" constant="16" id="hj8-E6-Ph1"/>
+                                            <constraint firstItem="f11-bx-kI2" firstAttribute="centerX" secondItem="vJe-Ec-xRF" secondAttribute="centerX" id="yUS-mb-fTk"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="DqT-Lc-6H1"/>
-                                    <constraint firstAttribute="width" constant="200" id="FPD-U9-HqD"/>
-                                    <constraint firstItem="vxy-aL-uu6" firstAttribute="centerY" secondItem="oxd-fW-PnS" secondAttribute="centerY" id="Uqp-7X-2SI"/>
-                                    <constraint firstItem="oxd-fW-PnS" firstAttribute="centerY" secondItem="f11-bx-kI2" secondAttribute="centerY" id="Yf9-Dq-zee"/>
-                                    <constraint firstItem="oxd-fW-PnS" firstAttribute="leading" secondItem="f11-bx-kI2" secondAttribute="leading" id="jmD-Mk-Yn1"/>
-                                    <constraint firstAttribute="trailing" secondItem="vxy-aL-uu6" secondAttribute="trailing" id="paP-Lc-nu8"/>
+                                    <constraint firstItem="vJe-Ec-xRF" firstAttribute="top" secondItem="7tt-UC-wUO" secondAttribute="top" id="5kO-Mp-rCa"/>
+                                    <constraint firstItem="vJe-Ec-xRF" firstAttribute="width" secondItem="enE-04-vji" secondAttribute="width" id="PGe-K9-m7f"/>
+                                    <constraint firstItem="vJe-Ec-xRF" firstAttribute="bottom" secondItem="7tt-UC-wUO" secondAttribute="bottom" id="UnW-64-bMa"/>
+                                    <constraint firstItem="vJe-Ec-xRF" firstAttribute="leading" secondItem="7tt-UC-wUO" secondAttribute="leading" id="YFP-Ko-JnL"/>
+                                    <constraint firstItem="vJe-Ec-xRF" firstAttribute="trailing" secondItem="7tt-UC-wUO" secondAttribute="trailing" id="w3P-PW-FK1"/>
                                 </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to auto fill the data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZH-3z-0Hi">
-                                <rect key="frame" x="105.66666666666669" y="471.66666666666669" width="152" height="24"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyX-ZZ-O24">
-                                <rect key="frame" x="20" y="465" width="78" height="37"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
-                                <state key="normal" title="Click Here"/>
-                            </button>
+                                <viewLayoutGuide key="contentLayoutGuide" id="7tt-UC-wUO"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="enE-04-vji"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="l4m-jj-Qq6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gml-xH-VhM"/>
-                            <constraint firstItem="FyX-ZZ-O24" firstAttribute="leading" secondItem="q0T-tD-Lkv" secondAttribute="leading" id="Occ-wY-OP0"/>
-                            <constraint firstItem="q0T-tD-Lkv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Qqz-81-PsX"/>
-                            <constraint firstItem="q0T-tD-Lkv" firstAttribute="top" secondItem="l4m-jj-Qq6" secondAttribute="bottom" constant="20" id="TdI-YJ-SUx"/>
-                            <constraint firstItem="l4m-jj-Qq6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="VI5-rq-RXv"/>
-                            <constraint firstItem="f11-bx-kI2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aJO-Op-IAO"/>
-                            <constraint firstItem="1ZH-3z-0Hi" firstAttribute="leading" secondItem="FyX-ZZ-O24" secondAttribute="trailing" constant="7.5" id="eXv-Vq-ayJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q0T-tD-Lkv" secondAttribute="trailing" constant="20" id="elZ-GX-RfP"/>
-                            <constraint firstItem="FyX-ZZ-O24" firstAttribute="top" secondItem="q0T-tD-Lkv" secondAttribute="bottom" constant="30" id="lqZ-bZ-Fa6"/>
-                            <constraint firstItem="f11-bx-kI2" firstAttribute="top" secondItem="q0T-tD-Lkv" secondAttribute="bottom" constant="100" id="mgl-mx-jeV"/>
-                            <constraint firstItem="1ZH-3z-0Hi" firstAttribute="centerY" secondItem="FyX-ZZ-O24" secondAttribute="centerY" id="rvh-qt-YxW"/>
+                            <constraint firstItem="2jo-Yc-GtL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="R9z-Je-WlB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2jo-Yc-GtL" secondAttribute="bottom" constant="16" id="Ud9-qm-PY5"/>
+                            <constraint firstItem="2jo-Yc-GtL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="c4n-13-Zga"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2jo-Yc-GtL" secondAttribute="trailing" constant="16" id="l3A-2k-qG8"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnAutoFill" destination="FyX-ZZ-O24" id="VAb-VW-VW4"/>
                         <outlet property="btnLogin" destination="vxy-aL-uu6" id="isv-5v-aod"/>
                         <outlet property="btnRegister" destination="oxd-fW-PnS" id="pMw-Oe-EIN"/>
                         <segue destination="SDM-Kc-vOD" kind="show" identifier="segue_registration" id="ngO-H4-73w"/>
@@ -105,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="76"/>
+            <point key="canvasLocation" x="20" y="75.355450236966817"/>
         </scene>
         <!--Login-->
         <scene sceneID="UdU-TQ-D2H">
@@ -138,40 +170,46 @@
                                 <rect key="frame" x="16" y="118.66666666666669" width="358" height="675.33333333333326"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLY-qO-UTS">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="328.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="346"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Login to view the menu and perform transactions." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUM-Xo-7yZ">
-                                                <rect key="frame" x="8" y="29.999999999999982" width="342" height="40.666666666666657"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="8" y="29.999999999999989" width="342" height="48.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAF-dR-5j5">
-                                                <rect key="frame" x="8" y="120.66666666666669" width="50" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="8" y="128.33333333333331" width="47" height="24.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F90-cL-OTI">
-                                                <rect key="frame" x="8" y="171.66666666666663" width="78" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="8" y="182.66666666666663" width="75" height="24.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G9g-Wu-CWN">
-                                                <rect key="frame" x="123" y="114.33333333333331" width="215" height="34"/>
+                                                <rect key="frame" x="120" y="123.66666666666669" width="218" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5hv-jg-VQM">
-                                                <rect key="frame" x="123" y="165.33333333333331" width="215" height="34"/>
+                                                <rect key="frame" x="120" y="178" width="218" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YbN-jg-LXl">
-                                                <rect key="frame" x="152.66666666666666" y="269.33333333333331" width="53" height="39"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <state key="normal" title="Login"/>
+                                                <rect key="frame" x="129" y="282" width="100" height="44"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="B0w-XS-AB6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                                <state key="normal" title="Login">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="login:" destination="34Q-zw-2zJ" eventType="touchUpInside" id="0El-3f-oXK"/>
                                                 </connections>
@@ -646,52 +684,52 @@
                                 <rect key="frame" x="16" y="111.33333333333331" width="358" height="682.66666666666674"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sd-dZ-sPR">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="527.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="535.33333333333337"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4h-fX-tg8">
-                                                <rect key="frame" x="10" y="60.666666666666686" width="328" height="216"/>
+                                                <rect key="frame" x="10" y="68.333333333333314" width="328" height="216"/>
                                             </pickerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the type of bank account you would like to add:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGH-en-zIP">
-                                                <rect key="frame" x="10" y="20.000000000000011" width="338" height="40.666666666666657"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="10" y="20.000000000000018" width="338" height="48.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bla-Kc-QOl" userLabel="SavingAccView">
-                                                <rect key="frame" x="10" y="276.66666666666669" width="338" height="170"/>
+                                                <rect key="frame" x="10" y="284.33333333333337" width="338" height="170"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount to add:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjq-9V-Tuy">
-                                                        <rect key="frame" x="0.0" y="7" width="118" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="6.9999999999999982" width="118" height="24.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z4E-NR-bKm">
-                                                        <rect key="frame" x="148" y="0.66666666666668561" width="190" height="34"/>
+                                                        <rect key="frame" x="148" y="2.3333333333333144" width="190" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum balance: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5f4-6V-7Oz">
-                                                        <rect key="frame" x="0.0" y="58" width="143" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="61.333333333333321" width="141" height="24.333333333333336"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G22-Qw-Bvm">
-                                                        <rect key="frame" x="163" y="58" width="25" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="161" y="61.333333333333321" width="26.333333333333343" height="24.333333333333336"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest rate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2h-Aq-I3A">
-                                                        <rect key="frame" x="0.0" y="109" width="97" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="115.66666666666663" width="104" height="24.333333333333343"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LW6-d6-gDd">
-                                                        <rect key="frame" x="163" y="109" width="30" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="161" y="115.66666666666663" width="30" height="24.333333333333343"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -715,38 +753,38 @@
                                                 </constraints>
                                             </view>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jlc-FH-MDf" userLabel="SalaryAccView">
-                                                <rect key="frame" x="10" y="276.66666666666669" width="338" height="170"/>
+                                                <rect key="frame" x="10" y="284.33333333333337" width="338" height="170"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount to add:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeq-qi-dbx">
-                                                        <rect key="frame" x="0.0" y="10" width="118" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="9.9999999999999982" width="118" height="24.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0qr-47-60f">
-                                                        <rect key="frame" x="148" y="3.6666666666666856" width="180" height="34"/>
+                                                        <rect key="frame" x="148" y="5.3333333333333144" width="180" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYK-Ed-7sD">
-                                                        <rect key="frame" x="0.0" y="61" width="76" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="64.333333333333314" width="73.666666666666671" height="24.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IEe-1h-oq6">
-                                                        <rect key="frame" x="148" y="54.666666666666686" width="180" height="34"/>
+                                                        <rect key="frame" x="148" y="59.666666666666629" width="180" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly Salary:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nd8-BK-6sk">
-                                                        <rect key="frame" x="0.0" y="112" width="118" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="118.66666666666667" width="122.33333333333333" height="24.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Odc-to-aYA">
-                                                        <rect key="frame" x="148" y="105.66666666666669" width="180" height="34"/>
+                                                        <rect key="frame" x="148" y="114" width="180" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -772,42 +810,42 @@
                                                 </constraints>
                                             </view>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hd5-AP-ZsY" userLabel="FdAccView">
-                                                <rect key="frame" x="10" y="276.66666666666669" width="338" height="170"/>
+                                                <rect key="frame" x="10" y="284.33333333333337" width="338" height="170"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount to add:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zy4-Ra-NVj">
-                                                        <rect key="frame" x="0.0" y="10" width="118" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="9.9999999999999982" width="118" height="24.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pr7-fP-9oj">
-                                                        <rect key="frame" x="148" y="3.6666666666666856" width="180" height="34"/>
+                                                        <rect key="frame" x="148" y="5.3333333333333144" width="180" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tenur (months):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVN-5a-8Wy">
-                                                        <rect key="frame" x="0.0" y="61" width="122" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="64.333333333333314" width="117" height="24.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tK3-if-006">
-                                                        <rect key="frame" x="148" y="54.666666666666686" width="180" height="34"/>
+                                                        <rect key="frame" x="148" y="59.666666666666629" width="180" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest rate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwa-FU-iPo">
-                                                        <rect key="frame" x="0.0" y="112" width="97" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="118.66666666666667" width="104" height="24.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TF-gw-Dl5">
-                                                        <rect key="frame" x="148" y="112" width="75" height="21"/>
+                                                        <rect key="frame" x="148" y="118.66666666666667" width="75" height="24.333333333333329"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="75" id="NCs-2o-hxc"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -832,7 +870,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiL-0N-ZFm">
-                                                <rect key="frame" x="141.66666666666666" y="466.66666666666669" width="75" height="41"/>
+                                                <rect key="frame" x="141.66666666666666" y="474.33333333333331" width="75" height="40.999999999999943"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="75" id="trV-dw-oR3"/>
                                                 </constraints>
@@ -944,10 +982,10 @@
                                 <rect key="frame" x="16" y="114" width="358" height="680"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ga-ho-BBG">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="701.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="713.33333333333337"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cPR-D0-8fT">
-                                                <rect key="frame" x="0.0" y="80.666666666666657" width="358" height="199.99999999999997"/>
+                                                <rect key="frame" x="0.0" y="88.333333333333343" width="358" height="200.00000000000003"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="P5d-et-kHw"/>
@@ -991,33 +1029,33 @@
                                                 </prototypes>
                                             </tableView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the acctount from which you would like to make the transfer:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNH-uG-pOI">
-                                                <rect key="frame" x="8" y="19.999999999999996" width="342" height="40.666666666666657"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="8" y="20.000000000000004" width="342" height="48.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the payee account:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYr-1d-kmo">
-                                                <rect key="frame" x="8" y="320.66666666666669" width="342" height="20.333333333333314"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="8" y="328.33333333333331" width="342" height="24.333333333333314"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLv-hT-f4d">
-                                                <rect key="frame" x="0.0" y="351" width="358" height="216"/>
+                                                <rect key="frame" x="0.0" y="362" width="358" height="216"/>
                                             </pickerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1O-BP-JYw">
-                                                <rect key="frame" x="20" y="577" width="69.666666666666671" height="27"/>
+                                                <rect key="frame" x="20" y="588.66666666666663" width="69.666666666666671" height="27"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="19"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ykc-yh-42n">
-                                                <rect key="frame" x="109.66666666666667" y="573.66666666666663" width="228.33333333333331" height="34"/>
+                                                <rect key="frame" x="109.66666666666667" y="585.33333333333337" width="228.33333333333331" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIY-Y9-iYE">
-                                                <rect key="frame" x="137.66666666666666" y="637.66666666666663" width="83" height="44"/>
+                                                <rect key="frame" x="137.66666666666666" y="649.33333333333337" width="83" height="44"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
                                                 <state key="normal" title="Transfer"/>
                                                 <connections>
@@ -1115,99 +1153,99 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCN-HX-Drd">
-                                <rect key="frame" x="16" y="122.66666666666669" width="358" height="687.33333333333348"/>
+                                <rect key="frame" x="16" y="122.66666666666669" width="358" height="687.33333333333326"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRo-Jq-5hb">
-                                        <rect key="frame" x="0.0" y="0.0" width="358" height="822.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="847"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYh-d0-caY">
-                                                <rect key="frame" x="8" y="49.999999999999986" width="50" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="8" y="49.999999999999986" width="47" height="24.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvo-Lw-kIP">
-                                                <rect key="frame" x="8" y="100.99999999999999" width="78" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="8" y="104.33333333333333" width="75" height="24.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRw-1P-Fnq">
-                                                <rect key="frame" x="8" y="203" width="66" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="8.0000000000000036" y="213" width="62.333333333333343" height="24.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScX-LQ-eF5">
-                                                <rect key="frame" x="8" y="254" width="68" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="8" y="267.33333333333331" width="64.333333333333329" height="24.333333333333314"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the type of bank account you would like to add:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3al-2e-LZQ">
-                                                <rect key="frame" x="8" y="305" width="340" height="40.666666666666686"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="8" y="321.66666666666663" width="340" height="48.333333333333314"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ckf-9T-BcR">
-                                                <rect key="frame" x="113" y="43.666666666666671" width="235" height="34"/>
+                                                <rect key="frame" x="110" y="45.333333333333329" width="238" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nwi-h9-GgZ">
-                                                <rect key="frame" x="113" y="94.666666666666671" width="235" height="34.000000000000014"/>
+                                                <rect key="frame" x="110" y="99.666666666666671" width="238" height="34.000000000000014"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kiH-1J-o3f">
-                                                <rect key="frame" x="113" y="196.66666666666663" width="235" height="34"/>
+                                                <rect key="frame" x="110" y="208.33333333333331" width="238" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJw-tR-Dnd">
-                                                <rect key="frame" x="113" y="247.66666666666663" width="235" height="34"/>
+                                                <rect key="frame" x="110" y="262.66666666666663" width="238" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3S-cS-ZNi">
-                                                <rect key="frame" x="8" y="345.66666666666663" width="340" height="216"/>
+                                                <rect key="frame" x="8" y="370" width="340" height="216"/>
                                             </pickerView>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhh-1f-Mp4" userLabel="SavingAccView">
-                                                <rect key="frame" x="8" y="571.66666666666674" width="340" height="170"/>
+                                                <rect key="frame" x="8" y="596" width="340" height="170"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount to add:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grX-ed-SIa">
-                                                        <rect key="frame" x="0.0" y="7" width="118" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="6.9999999999999982" width="118" height="24.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t2e-Jp-qrs">
-                                                        <rect key="frame" x="148" y="0.66666666666662877" width="192" height="34"/>
+                                                        <rect key="frame" x="148" y="2.3333333333333712" width="192" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum balance: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFc-s9-L2A">
-                                                        <rect key="frame" x="0.0" y="58" width="143" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="61.333333333333378" width="141" height="24.333333333333336"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wns-2P-MT5">
-                                                        <rect key="frame" x="163" y="58" width="25" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="161" y="61.333333333333378" width="26.333333333333343" height="24.333333333333336"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest rate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="br8-4t-Fze">
-                                                        <rect key="frame" x="0.0" y="109" width="97" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="115.66666666666674" width="104" height="24.333333333333343"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgh-qo-uQH">
-                                                        <rect key="frame" x="163" y="109" width="30" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="161" y="115.66666666666674" width="30" height="24.333333333333343"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1231,38 +1269,38 @@
                                                 </constraints>
                                             </view>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJE-74-CUU" userLabel="SalaryAccView">
-                                                <rect key="frame" x="8" y="571.66666666666674" width="350" height="170"/>
+                                                <rect key="frame" x="8" y="596" width="350" height="170"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount to add:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNM-Zd-Gqq">
-                                                        <rect key="frame" x="0.0" y="10" width="118" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="9.9999999999999982" width="118" height="24.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mgO-Ew-gd5">
-                                                        <rect key="frame" x="148" y="3.6666666666666288" width="192" height="34"/>
+                                                        <rect key="frame" x="148" y="5.3333333333333712" width="192" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAa-rQ-mvc">
-                                                        <rect key="frame" x="0.0" y="61" width="76" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="64.333333333333371" width="73.666666666666671" height="24.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rpx-dJ-Tno">
-                                                        <rect key="frame" x="148" y="54.666666666666629" width="192" height="34"/>
+                                                        <rect key="frame" x="148" y="59.666666666666742" width="192" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly Salary:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6X-tr-hzl">
-                                                        <rect key="frame" x="0.0" y="112" width="118" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="118.66666666666673" width="122.33333333333333" height="24.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yOQ-9r-SiL">
-                                                        <rect key="frame" x="148" y="105.66666666666663" width="192" height="34"/>
+                                                        <rect key="frame" x="148" y="114" width="192" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -1288,42 +1326,42 @@
                                                 </constraints>
                                             </view>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ib-jx-mAc" userLabel="FdAccView">
-                                                <rect key="frame" x="8" y="571.66666666666674" width="350" height="170"/>
+                                                <rect key="frame" x="8" y="596" width="350" height="170"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount to add:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEr-gE-Iex">
-                                                        <rect key="frame" x="0.0" y="10" width="118" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="9.9999999999999982" width="118" height="24.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ag-D2-xmq">
-                                                        <rect key="frame" x="148" y="3.6666666666666288" width="192" height="34"/>
+                                                        <rect key="frame" x="148" y="5.3333333333333712" width="192" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tenur (months):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvx-B7-HaS">
-                                                        <rect key="frame" x="0.0" y="61" width="122" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="64.333333333333371" width="117" height="24.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRN-l3-OtF">
-                                                        <rect key="frame" x="148" y="54.666666666666629" width="192" height="34"/>
+                                                        <rect key="frame" x="148" y="59.666666666666742" width="192" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest rate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvr-Z3-WsF">
-                                                        <rect key="frame" x="0.0" y="112" width="97" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="0.0" y="118.66666666666673" width="104" height="24.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11V-3P-Xkf">
-                                                        <rect key="frame" x="148" y="112" width="75" height="21"/>
+                                                        <rect key="frame" x="148" y="118.66666666666673" width="75" height="24.333333333333329"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="75" id="JuX-nd-xfK"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1348,21 +1386,27 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiO-x5-sqm">
-                                                <rect key="frame" x="148" y="761.66666666666674" width="62" height="41"/>
+                                                <rect key="frame" x="119" y="786" width="120" height="41"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="gXE-Xw-Qj3"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
-                                                <state key="normal" title="Submit"/>
+                                                <state key="normal" title="Submit">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="onSubmit:" destination="SDM-Kc-vOD" eventType="touchUpInside" id="IaJ-4j-6zo"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1U-HT-1ia">
-                                                <rect key="frame" x="8" y="152" width="61" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="8" y="158.66666666666663" width="60" height="24.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xfo-Ta-oFE">
-                                                <rect key="frame" x="113" y="147" width="127" height="32"/>
+                                                <rect key="frame" x="110" y="155.33333333333331" width="127" height="32"/>
                                                 <segments>
                                                     <segment title="Male"/>
                                                     <segment title="Female"/>
@@ -1472,6 +1516,7 @@
     </scenes>
     <resources>
         <image name="add_bankAcc_icon" width="512" height="512"/>
+        <image name="bank_icon" width="512" height="512"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="deposit_icon" width="220" height="224"/>
         <image name="edit_profile_icon" width="512" height="512"/>
@@ -1491,6 +1536,9 @@
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
