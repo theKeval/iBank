@@ -1041,7 +1041,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLv-hT-f4d">
-                                                <rect key="frame" x="0.0" y="362" width="358" height="216"/>
+                                                <rect key="frame" x="0.0" y="362.66666666666669" width="358" height="216.00000000000006"/>
                                             </pickerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1O-BP-JYw">
                                                 <rect key="frame" x="20" y="588.66666666666663" width="69.666666666666671" height="27"/>
