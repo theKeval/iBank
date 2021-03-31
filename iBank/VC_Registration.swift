@@ -114,21 +114,6 @@ class VC_Registration: UIViewController {
                 self.dismiss(animated: true, completion: nil)
             }])
             
-//            field_name.text = ""
-//            field_password.text = ""
-//            field_contact.text = ""
-//            field_address.text = ""
-//            picker_accType.selectRow(0, inComponent: 0, animated: true)
-//            pickerView(picker_accType, didSelectRow: 0, inComponent: 0)
-//            savingField_amount.text = ""
-//            salaryField_amount.text = ""
-//            salaryField_employer.text = ""
-//            salaryField_salary.text = ""
-//            fdField_amount.text = ""
-//            fdField_months.text = ""
-            
-            // self.showCustomToast(message: "Registration Successful!", font: UIFont.myFont())
-            // self.dismiss(animated: true, completion: nil)
         }
     }
     
