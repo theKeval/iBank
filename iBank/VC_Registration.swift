@@ -52,6 +52,8 @@ class VC_Registration: UIViewController {
         
         pickerView(picker_accType, didSelectRow: 0, inComponent: 0)
         // scrollView_main.scrollsToTop = true
+        
+        btnSubmit.layer.cornerRadius = CGFloat(12)
     }
     
     // MARK: - Navigation

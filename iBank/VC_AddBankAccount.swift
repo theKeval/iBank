@@ -28,6 +28,8 @@ class VC_AddBankAccount: UIViewController {
     @IBOutlet weak var fdField_months: UITextField!
     @IBOutlet weak var fdLabel_intRate: UILabel!
     
+    @IBOutlet weak var btnSubmit: UIButton!
+    
     // Variables
     var accTypes = ["Saving Account", "Salary Account", "Fixed Deposit Account"]
     var accounts: Accounts?
@@ -52,6 +54,8 @@ class VC_AddBankAccount: UIViewController {
         else {
             print("Error - loggedInCustomer is nil")
         }
+        
+        btnSubmit.layer.cornerRadius = CGFloat(12)
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation

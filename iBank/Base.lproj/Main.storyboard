@@ -905,6 +905,7 @@
                     <navigationItem key="navigationItem" id="uWr-GD-CYV"/>
                     <connections>
                         <outlet property="btnBack" destination="Iwx-om-IqP" id="4PJ-Ug-Ktb"/>
+                        <outlet property="btnSubmit" destination="jiL-0N-ZFm" id="gEE-X1-CQD"/>
                         <outlet property="fdField_amount" destination="pr7-fP-9oj" id="F4o-E1-q7P"/>
                         <outlet property="fdField_months" destination="tK3-if-006" id="sV4-dJ-rXo"/>
                         <outlet property="fdLabel_intRate" destination="2TF-gw-Dl5" id="JTr-c8-hnC"/>
@@ -1270,6 +1271,7 @@
                     <navigationItem key="navigationItem" id="xHj-nM-nlH"/>
                     <connections>
                         <outlet property="btnBack" destination="qHo-4V-cPe" id="DcN-aN-YUf"/>
+                        <outlet property="btnUpdate" destination="6hZ-c0-Udc" id="3am-P2-uBq"/>
                         <outlet property="field_address" destination="18B-Xy-37T" id="ooB-bn-WBG"/>
                         <outlet property="field_contact" destination="FHT-ei-bnw" id="qhI-yE-H9g"/>
                         <outlet property="field_name" destination="NBA-DO-XG8" id="bwY-h4-kCF"/>

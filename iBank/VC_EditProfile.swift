@@ -15,7 +15,7 @@ class VC_EditProfile: UIViewController {
     @IBOutlet weak var segment_gender: UISegmentedControl!
     @IBOutlet weak var field_contact: UITextField!
     @IBOutlet weak var field_address: UITextField!
-    
+    @IBOutlet weak var btnUpdate: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,8 @@ class VC_EditProfile: UIViewController {
             field_contact.text = user.contactNo
             field_address.text = user.address
         }
+        
+        btnUpdate.layer.cornerRadius = CGFloat(12)
     }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

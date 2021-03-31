@@ -19,10 +19,12 @@ class VC_Login: UIViewController {
 
         // Do any additional setup after loading the view.
         fieldName.becomeFirstResponder()
+        btnLogin.layer.cornerRadius = CGFloat(12)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         fieldName.becomeFirstResponder()
+        btnLogin.layer.cornerRadius = CGFloat(12)
     }
     
     // MARK: - Navigation

@@ -55,6 +55,8 @@ class VC_TransferMoney: UIViewController {
         picker_payee.dataSource = self
         // picker_payee.selectRow(0, inComponent: 0, animated: true)
         pickerView(picker_payee, didSelectRow: 0, inComponent: 0)
+        
+        btnTransfer.layer.cornerRadius = CGFloat(12)
     }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
